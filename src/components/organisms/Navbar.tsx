@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { BrandMark } from '../atoms/BrandMark'
 
 const links = [
   { href: '#before', label: 'Before' },
@@ -26,12 +25,9 @@ export function Navbar() {
           <a
             href="#top"
             onClick={close}
-            className="flex items-center gap-2.5"
+            className="font-display text-base font-semibold tracking-tight text-ink"
           >
-            {/* <BrandMark size={32} /> */}
-            <span className="font-display text-base font-semibold tracking-tight text-ink">
-              Triplog
-            </span>
+            Triplog
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             {links.map(link => (
