@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { MagneticButton } from '../atoms/MagneticButton'
+import { BrandMark } from '../atoms/BrandMark'
 import { HeroConstellation } from '../molecules/HeroConstellation'
 
 export function HeroSection() {
@@ -16,14 +17,17 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-4 pb-16 sm:px-5 sm:pb-20 md:gap-12 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="text-center lg:text-left">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
-            className="font-display mb-4 text-3xl font-semibold tracking-tight text-ink sm:mb-6 sm:text-4xl md:text-5xl"
+            className="mb-6 flex justify-center lg:mb-8 lg:justify-start"
           >
-            Triplog
-          </motion.p>
+            <BrandMark
+              size={104}
+              className="h-20 w-20 shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:h-[104px] sm:w-[104px]"
+            />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}

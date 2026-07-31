@@ -1,4 +1,5 @@
 export { MagneticButton } from './MagneticButton'
+export { BrandMark } from './BrandMark'
 export { Heading } from './Heading'
 export { Text } from './Text'
 export { Badge } from './Badge'
