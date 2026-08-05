@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { BrandMark } from '../components/atoms/BrandMark'
+import { ThemeToggle } from '../components/atoms/ThemeToggle'
 import { Footer } from '../components/organisms/Footer'
 
 const UPDATED = 'August 5, 2026'
@@ -121,7 +122,7 @@ export function TermsPage() {
   return (
     <main className="min-h-dvh bg-bg text-ink">
       {!embedded ? (
-        <header className="border-b border-white/[0.06]">
+        <header className="border-b border-line">
           <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-5 sm:px-5 md:px-8">
             <Link to="/" className="flex items-center gap-2.5">
               <BrandMark size={32} />
@@ -129,12 +130,15 @@ export function TermsPage() {
                 Triplog
               </span>
             </Link>
-            <Link
-              to="/"
-              className="text-sm text-muted transition-colors hover:text-ink"
-            >
-              Back to home
-            </Link>
+            <div className="flex items-center gap-3">
+              <ThemeToggle />
+              <Link
+                to="/"
+                className="text-sm text-muted transition-colors hover:text-ink"
+              >
+                Back to home
+              </Link>
+            </div>
           </div>
         </header>
       ) : null}

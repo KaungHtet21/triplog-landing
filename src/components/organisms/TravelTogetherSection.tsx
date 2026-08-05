@@ -48,7 +48,7 @@ export function TravelTogetherSection() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(255,255,255,0.04),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,var(--hero-glow),transparent_50%)]"
       />
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-4 sm:px-5 md:grid-cols-2 md:gap-12 md:px-8">
         <div className="min-w-0">
@@ -67,8 +67,8 @@ export function TravelTogetherSection() {
                   onClick={() => setActive(index)}
                   className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                     index === active
-                      ? 'border-white/25 bg-white text-accent-ink'
-                      : 'border-white/10 bg-transparent text-muted'
+                      ? 'border-ink/30 bg-accent text-accent-ink'
+                      : 'border-line bg-transparent text-muted'
                   }`}
                 >
                   {item.label}
@@ -84,7 +84,7 @@ export function TravelTogetherSection() {
                 key={item.id}
                 className={`rounded-xl border px-4 py-3.5 transition ${
                   index === active
-                    ? 'border-white/20 bg-white/[0.06]'
+                    ? 'border-line bg-accent-soft'
                     : 'border-transparent bg-transparent'
                 }`}
               >

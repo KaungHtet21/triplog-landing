@@ -1,20 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  /* Black accent palette (from app palette.ts) on a Nest-like dark canvas */
-  --color-bg: #050505;
-  --color-bg-elevated: #0a0a0a;
-  --color-bg-surface: #111111;
-  --color-accent: #ffffff;
-  --color-accent-ink: #191919;
-  --color-accent-soft: rgba(255, 255, 255, 0.06);
-  --color-accent-glow: rgba(255, 255, 255, 0.08);
-  --color-ink: #fafafa;
-  --color-muted: #a1a1a1;
-  --color-subtle: #737373;
-  --color-line: rgba(255, 255, 255, 0.08);
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-surface: var(--bg-surface);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-glow: var(--accent-glow);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root,
+.dark {
+  --bg: #050505;
+  --bg-elevated: #0a0a0a;
+  --bg-surface: #111111;
+  --accent: #ffffff;
+  --accent-ink: #191919;
+  --accent-soft: rgba(255, 255, 255, 0.06);
+  --accent-glow: rgba(255, 255, 255, 0.08);
+  --ink: #fafafa;
+  --muted: #a1a1a1;
+  --subtle: #737373;
+  --line: rgba(255, 255, 255, 0.08);
+  --glass: rgba(10, 10, 10, 0.72);
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --selection-bg: #ffffff;
+  --selection-fg: #191919;
+  --accent-border-a: rgba(255, 255, 255, 0.22);
+  --accent-border-b: rgba(255, 255, 255, 0.04);
+  --accent-border-c: rgba(255, 255, 255, 0.12);
+  --hero-glow: rgba(255, 255, 255, 0.06);
+}
+
+.light {
+  --bg: #f7f7f5;
+  --bg-elevated: #ffffff;
+  --bg-surface: #f0f0ee;
+  --accent: #191919;
+  --accent-ink: #fafafa;
+  --accent-soft: rgba(25, 25, 25, 0.05);
+  --accent-glow: rgba(25, 25, 25, 0.08);
+  --ink: #191919;
+  --muted: #5c5c5c;
+  --subtle: #8a8a8a;
+  --line: rgba(0, 0, 0, 0.08);
+  --glass: rgba(255, 255, 255, 0.78);
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --selection-bg: #191919;
+  --selection-fg: #fafafa;
+  --accent-border-a: rgba(25, 25, 25, 0.18);
+  --accent-border-b: rgba(25, 25, 25, 0.04);
+  --accent-border-c: rgba(25, 25, 25, 0.1);
+  --hero-glow: rgba(25, 25, 25, 0.04);
 }
 
 html {
@@ -35,8 +79,8 @@ body {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #191919;
+  background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 .font-display {
@@ -46,8 +90,8 @@ body {
 /* Nest-like subtle grid */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   background-position: center top;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
@@ -74,7 +118,7 @@ body {
 }
 
 .glass {
-  background: rgba(10, 10, 10, 0.72);
+  background: var(--glass);
   backdrop-filter: blur(18px) saturate(1.2);
   border: 1px solid var(--color-line);
 }
@@ -82,10 +126,14 @@ body {
 .accent-border {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.22),
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.12)
+    var(--accent-border-a),
+    var(--accent-border-b),
+    var(--accent-border-c)
   );
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse at top, var(--hero-glow), transparent 55%);
 }
 
 .scrollbar-none {

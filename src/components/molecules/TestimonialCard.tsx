@@ -19,7 +19,7 @@ export function TestimonialCard({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="rounded-2xl border border-white/8 bg-bg-surface p-5 sm:rounded-3xl sm:p-7 md:p-8"
+      className="rounded-2xl border border-line bg-bg-surface p-5 sm:rounded-3xl sm:p-7 md:p-8"
     >
       <p className="text-base leading-relaxed text-ink/90 sm:text-lg md:text-xl">
         “{quote}”

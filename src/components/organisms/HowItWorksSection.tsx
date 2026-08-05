@@ -20,7 +20,7 @@ export function HowItWorksSection() {
           >
             <motion.path
               d="M0 20 C150 0, 450 40, 600 20"
-              stroke="rgba(255,255,255,0.2)"
+              stroke="var(--line)"
               strokeWidth="1.5"
               strokeDasharray="6 8"
               initial={{ pathLength: 0, opacity: 0 }}
@@ -36,7 +36,7 @@ export function HowItWorksSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.55 }}
-              className="rounded-2xl border border-white/[0.08] bg-bg-surface p-6 sm:p-8"
+              className="rounded-2xl border border-line bg-bg-surface p-6 sm:p-8"
             >
               <p className="text-sm font-medium text-subtle">{step.step}</p>
               <h3 className="font-display mt-3 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">

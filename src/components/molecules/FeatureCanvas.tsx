@@ -27,7 +27,7 @@ function CountdownCanvas() {
         ].map(cell => (
           <div
             key={cell.l}
-            className="rounded-xl border border-white/10 bg-white/[0.03] py-4 sm:rounded-2xl sm:py-6"
+            className="rounded-xl border border-line bg-accent-soft py-4 sm:rounded-2xl sm:py-6"
           >
             <p className="font-display text-3xl font-semibold text-ink sm:text-4xl md:text-5xl">
               {cell.n}
@@ -42,9 +42,9 @@ function CountdownCanvas() {
         <span className="text-[10px] uppercase tracking-[0.16em] text-subtle">
           Home
         </span>
-        <div className="relative h-px flex-1 bg-white/15">
+        <div className="relative h-px flex-1 bg-accent/15">
           <motion.span
-            className="absolute -top-1.5 h-3 w-3 rounded-full bg-white"
+            className="absolute -top-1.5 h-3 w-3 rounded-full bg-accent"
             animate={{ left: ['0%', '100%'] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -76,7 +76,7 @@ function NotesCanvas() {
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.08 * i, duration: 0.4 }}
-            className="border-b border-white/[0.06] pb-2.5 font-display text-base text-ink sm:pb-3 sm:text-xl md:text-2xl"
+            className="border-b border-line pb-2.5 font-display text-base text-ink sm:pb-3 sm:text-xl md:text-2xl"
           >
             {line}
           </motion.p>
@@ -104,13 +104,13 @@ function InspirationCanvas() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 * i }}
-            className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 sm:rounded-2xl sm:px-5 sm:py-4"
+            className="flex items-center justify-between gap-3 rounded-xl border border-line bg-accent-soft px-4 py-3 sm:rounded-2xl sm:px-5 sm:py-4"
           >
             <div className="min-w-0">
               <p className="truncate text-sm font-medium text-ink">{item.title}</p>
               <p className="mt-1 text-xs text-muted">Saved for the crew</p>
             </div>
-            <span className="shrink-0 rounded-full border border-white/10 px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-subtle sm:px-3">
+            <span className="shrink-0 rounded-full border border-line px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-subtle sm:px-3">
               {item.kind}
             </span>
           </motion.div>
@@ -144,9 +144,9 @@ function SavingCanvas() {
           1% funded
         </p>
       </div>
-      <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10 sm:mt-5">
+      <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-accent-soft sm:mt-5">
         <motion.div
-          className="h-full rounded-full bg-white"
+          className="h-full rounded-full bg-accent"
           initial={{ width: 0 }}
           animate={{ width: '8%' }}
           transition={{ duration: 0.9 }}
@@ -161,9 +161,9 @@ function SavingCanvas() {
                 <span className="truncate text-ink">{r.name}</span>
                 <span className="shrink-0 text-muted">{r.amount}</span>
               </div>
-              <div className="h-1 overflow-hidden rounded-full bg-white/10">
+              <div className="h-1 overflow-hidden rounded-full bg-accent-soft">
                 <motion.div
-                  className="h-full rounded-full bg-white/70"
+                  className="h-full rounded-full bg-accent/70"
                   initial={{ width: 0 }}
                   animate={{ width: r.w }}
                   transition={{ duration: 0.8, delay: 0.1 * i }}
@@ -179,13 +179,13 @@ function SavingCanvas() {
 
 export function FeatureCanvas({ stage }: FeatureCanvasProps) {
   return (
-    <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_55%),#0a0a0a] shadow-[0_40px_100px_rgba(0,0,0,0.5)] sm:aspect-[4/5] sm:rounded-[1.75rem] md:aspect-square">
+    <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-line bg-[radial-gradient(ellipse_at_top,var(--hero-glow),transparent_55%),var(--bg-elevated)] shadow-[0_40px_100px_rgba(0,0,0,0.18)] sm:aspect-[4/5] sm:rounded-[1.75rem] md:aspect-square">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+            'linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
       />

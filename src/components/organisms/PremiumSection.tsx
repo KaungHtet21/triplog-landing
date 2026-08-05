@@ -8,7 +8,7 @@ export function PremiumSection() {
     <section id="plus" className="relative overflow-hidden py-20 sm:py-28 md:py-36">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.05),transparent_45%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--hero-glow),transparent_45%)]"
       />
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
         <SectionHeading
@@ -30,7 +30,7 @@ export function PremiumSection() {
                   key={game.title}
                   whileHover={{ y: -4 }}
                   transition={{ delay: index * 0.05 }}
-                  className="rounded-2xl border border-white/[0.08] bg-black/50 p-5 sm:p-6"
+                  className="rounded-2xl border border-line bg-bg-elevated/80 p-5 sm:p-6"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-subtle">
                     Plus

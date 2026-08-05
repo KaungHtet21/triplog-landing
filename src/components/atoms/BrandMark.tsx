@@ -16,7 +16,7 @@ export function BrandMark({
       alt={alt}
       width={size}
       height={size}
-      className={`rounded-[22%] bg-black object-cover ring-1 ring-white/10 ${className}`}
+      className={`rounded-[22%] bg-black object-cover ring-1 ring-line ${className}`}
       draggable={false}
     />
   )

@@ -38,8 +38,8 @@ export function MagneticButton({
 
   const base =
     variant === 'primary'
-      ? 'bg-white text-accent-ink hover:bg-white/90'
-      : 'bg-transparent text-ink border border-white/15 hover:border-white/35 hover:bg-white/[0.04]'
+      ? 'bg-accent text-accent-ink hover:opacity-90'
+      : 'bg-transparent text-ink border border-line hover:bg-accent-soft'
 
   return (
     <motion.button

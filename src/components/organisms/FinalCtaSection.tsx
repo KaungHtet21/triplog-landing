@@ -5,7 +5,7 @@ export function FinalCtaSection() {
   return (
     <section
       id="download"
-      className="relative overflow-hidden border-t border-white/[0.06] py-24 sm:py-32 md:py-40"
+      className="relative overflow-hidden border-t border-line py-24 sm:py-32 md:py-40"
     >
       <div aria-hidden className="grid-bg pointer-events-none absolute inset-0 opacity-80" />
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-5 md:px-8">

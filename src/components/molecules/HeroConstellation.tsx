@@ -13,7 +13,7 @@ function Chip({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-white/10 bg-bg-elevated/90 p-3.5 shadow-xl backdrop-blur-md sm:p-4 ${className}`}
+      className={`rounded-2xl border border-line bg-bg-elevated/90 p-3.5 shadow-xl backdrop-blur-md sm:p-4 ${className}`}
     >
       <p className="text-[10px] uppercase tracking-[0.16em] text-subtle">{label}</p>
       {children}
@@ -51,8 +51,8 @@ export function HeroConstellation() {
             <p className="font-display mt-2 text-base font-semibold text-ink">
               MMK 65k
             </p>
-            <div className="mt-2.5 h-1 overflow-hidden rounded-full bg-white/10">
-              <div className="h-full w-[12%] rounded-full bg-white" />
+            <div className="mt-2.5 h-1 overflow-hidden rounded-full bg-accent-soft">
+              <div className="h-full w-[12%] rounded-full bg-accent" />
             </div>
           </Chip>
           <Chip label="Inspiration">
@@ -66,7 +66,7 @@ export function HeroConstellation() {
             Meet at gate B2 · don’t forget power bank
           </p>
         </Chip>
-        <div className="flex items-center gap-2 self-start rounded-full border border-white/10 bg-bg-elevated/90 py-2 pl-2 pr-4">
+        <div className="flex items-center gap-2 self-start rounded-full border border-line bg-bg-elevated/90 py-2 pl-2 pr-4">
           <div className="flex -space-x-2">
             {['#3f3f46', '#52525b', '#71717a'].map(c => (
               <span
@@ -84,11 +84,11 @@ export function HeroConstellation() {
       <div className="relative mx-auto hidden aspect-square w-full max-w-[480px] lg:block">
         <div
           aria-hidden
-          className="absolute inset-[8%] rounded-full border border-white/[0.06]"
+          className="absolute inset-[8%] rounded-full border border-line"
         />
         <div
           aria-hidden
-          className="absolute inset-[22%] rounded-full border border-dashed border-white/[0.08]"
+          className="absolute inset-[22%] rounded-full border border-dashed border-line"
         />
         <motion.div
           aria-hidden
@@ -96,9 +96,9 @@ export function HeroConstellation() {
           animate={{ rotate: 360 }}
           transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
         >
-          <span className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-white/40" />
-          <span className="absolute bottom-[18%] left-[8%] h-1 w-1 rounded-full bg-white/25" />
-          <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-white/30" />
+          <span className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-accent/40" />
+          <span className="absolute bottom-[18%] left-[8%] h-1 w-1 rounded-full bg-accent/25" />
+          <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-accent/30" />
         </motion.div>
 
         <motion.div
@@ -110,7 +110,7 @@ export function HeroConstellation() {
           }}
           className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2"
         >
-          <div className="rounded-3xl border border-white/12 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-6 text-center shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-md">
+          <div className="rounded-3xl border border-line bg-gradient-to-b from-accent-soft to-transparent p-6 text-center shadow-[0_30px_80px_rgba(0,0,0,0.18)] backdrop-blur-md">
             <p className="text-[10px] uppercase tracking-[0.22em] text-subtle">
               Departure
             </p>
@@ -120,7 +120,7 @@ export function HeroConstellation() {
             <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted">
               Days to go
             </p>
-            <div className="mt-5 h-px w-full bg-white/10" />
+            <div className="mt-5 h-px w-full bg-accent-soft" />
             <p className="mt-4 text-sm text-muted">Tomorrowland · Yangon</p>
           </div>
         </motion.div>
@@ -138,9 +138,9 @@ export function HeroConstellation() {
             <p className="font-display mt-2 text-lg font-semibold text-ink">
               MMK 65k
             </p>
-            <div className="mt-3 h-1 overflow-hidden rounded-full bg-white/10">
+            <div className="mt-3 h-1 overflow-hidden rounded-full bg-accent-soft">
               <motion.div
-                className="h-full rounded-full bg-white"
+                className="h-full rounded-full bg-accent"
                 initial={{ width: 0 }}
                 animate={{ width: '12%' }}
                 transition={{ duration: 1.2, delay: 0.6 }}
@@ -178,7 +178,7 @@ export function HeroConstellation() {
           <Chip label="Notes">
             <p className="mt-2 text-sm leading-relaxed text-ink/90">
               Meet at gate B2 · don’t forget power bank
-              <span className="ml-0.5 inline-block h-3.5 w-px animate-pulse bg-white align-middle" />
+              <span className="ml-0.5 inline-block h-3.5 w-px animate-pulse bg-accent align-middle" />
             </p>
           </Chip>
         </motion.div>
@@ -192,7 +192,7 @@ export function HeroConstellation() {
           }}
           className="absolute bottom-[14%] left-[4%]"
         >
-          <div className="flex items-center gap-2 rounded-full border border-white/10 bg-bg-elevated/90 py-2 pl-2 pr-4 backdrop-blur-md">
+          <div className="flex items-center gap-2 rounded-full border border-line bg-bg-elevated/90 py-2 pl-2 pr-4 backdrop-blur-md">
             <div className="flex -space-x-2">
               {['#3f3f46', '#52525b', '#71717a'].map(c => (
                 <span

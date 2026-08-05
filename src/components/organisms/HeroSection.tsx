@@ -10,10 +10,7 @@ export function HeroSection() {
       className="relative flex min-h-[100dvh] items-center overflow-hidden pt-24 sm:pt-28"
     >
       <div aria-hidden className="grid-bg pointer-events-none absolute inset-0" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_55%)]"
-      />
+      <div aria-hidden className="hero-glow pointer-events-none absolute inset-x-0 top-0 h-[70vh]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-4 pb-16 sm:px-5 sm:pb-20 md:gap-12 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="text-center lg:text-left">

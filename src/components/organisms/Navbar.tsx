@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { ThemeToggle } from '../atoms/ThemeToggle'
 
 const links = [
   { href: '#before', label: 'Before' },
@@ -41,10 +42,11 @@ export function Navbar() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href="#download"
               onClick={close}
-              className="rounded-full bg-white px-3.5 py-2 text-sm font-semibold text-accent-ink transition hover:bg-white/90 sm:px-4"
+              className="rounded-full bg-accent px-3.5 py-2 text-sm font-semibold text-accent-ink transition hover:opacity-90 sm:px-4"
             >
               Download
             </a>
@@ -53,7 +55,7 @@ export function Navbar() {
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
               onClick={() => setOpen(v => !v)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-ink md:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink md:hidden"
             >
               <span className="sr-only">Menu</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -91,7 +93,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={close}
-                  className="block rounded-xl px-4 py-3 text-sm text-muted transition hover:bg-white/[0.04] hover:text-ink"
+                  className="block rounded-xl px-4 py-3 text-sm text-muted transition hover:bg-accent-soft hover:text-ink"
                 >
                   {link.label}
                 </a>

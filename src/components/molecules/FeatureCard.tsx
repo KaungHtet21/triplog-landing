@@ -18,7 +18,7 @@ export function FeatureCard({ title, copy, index }: FeatureCardProps) {
         ease: [0.22, 1, 0.36, 1],
       }}
       whileHover={{ y: -4 }}
-      className="group rounded-2xl border border-white/[0.08] bg-bg-surface/60 p-6 transition hover:border-white/16 hover:bg-bg-surface md:p-7"
+      className="group rounded-2xl border border-line bg-bg-surface/60 p-6 transition hover:border-line hover:bg-bg-surface md:p-7"
     >
       <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.18em] text-subtle">
         {String(index + 1).padStart(2, '0')}
