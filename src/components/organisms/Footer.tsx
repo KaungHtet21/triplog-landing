@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BrandMark } from '../atoms/BrandMark'
 
 export function Footer() {
@@ -10,7 +11,15 @@ export function Footer() {
             © {new Date().getFullYear()} Triplog
           </p>
         </div>
-        <p>Travel together. Remember forever.</p>
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
+          <Link
+            to="/terms"
+            className="transition-colors hover:text-ink"
+          >
+            Terms &amp; Conditions
+          </Link>
+          <p>Travel together. Remember forever.</p>
+        </div>
       </div>
     </footer>
   )
