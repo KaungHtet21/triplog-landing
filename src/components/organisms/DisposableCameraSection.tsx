@@ -48,7 +48,7 @@ export function DisposableCameraSection() {
     <section
       ref={sectionRef}
       id="camera"
-      className="film-grain relative overflow-hidden bg-black py-20 sm:py-28 md:py-36"
+      className="film-grain relative overflow-hidden bg-bg py-20 sm:py-28 md:py-36"
     >
       <AnimatePresence>
         {flash ? (
@@ -70,7 +70,7 @@ export function DisposableCameraSection() {
 
         <div className="mt-10 grid items-center gap-8 sm:mt-14 sm:gap-10 lg:mt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
           <div className="relative min-w-0">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/15 bg-zinc-950 sm:aspect-[16/11] sm:rounded-[1.5rem]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-bg-elevated sm:aspect-[16/11] sm:rounded-[1.5rem]">
               <img
                 src={FILM[0]}
                 alt=""
@@ -121,7 +121,7 @@ export function DisposableCameraSection() {
                       : { opacity: 0.25, y: 12 }
                   }
                   transition={{ delay: 0.08 * i, duration: 0.55 }}
-                  className="h-20 w-16 shrink-0 rounded-lg object-cover ring-1 ring-white/10 sm:h-24 sm:w-20"
+                  className="h-20 w-16 shrink-0 rounded-lg object-cover ring-1 ring-line sm:h-24 sm:w-20"
                 />
               ))}
             </div>
@@ -134,15 +134,15 @@ export function DisposableCameraSection() {
             </p>
             <ul className="mt-8 space-y-3 text-sm text-muted sm:mt-10 sm:space-y-4">
               <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 Photo tap · video long-press
               </li>
               <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 Flip camera · zoom while you shoot
               </li>
               <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 Built for the trip — not for the algorithm
               </li>
             </ul>
