@@ -124,7 +124,7 @@ const SECTIONS: Section[] = [
     title: '11. Deleting your account and data',
     paragraphs: [
       'You can delete your account at any time in the App under Settings → Delete account.',
-      `If you cannot access the App, email ${SUPPORT_EMAIL} from the email address on your account with the subject “Delete my account”, and we will process your request.`,
+      `If you cannot access the App, email ${SUPPORT_EMAIL} from the email address on your account with the subject “Delete my account”, and we will process your request within 30 days. Full steps are at triplogco.com/delete-account.`,
     ],
   },
   {
