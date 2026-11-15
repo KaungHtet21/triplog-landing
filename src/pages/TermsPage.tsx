@@ -65,7 +65,7 @@ const SECTIONS: Section[] = [
   {
     title: '7. Privacy',
     paragraphs: [
-      'How we handle personal data is described in our in-app privacy controls and any privacy policy we publish. Features such as hiding your email or location from other users are available in Settings where offered.',
+      'How we handle personal data is described in our Privacy Policy at triplogco.com/privacy. Features such as hiding your email or location from other users are available in Settings where offered.',
       'Media you choose to download to your device gallery is stored on your device under your device’s rules; clearing Triplog’s cache does not remove gallery saves.',
     ],
   },

@@ -18,6 +18,12 @@ export function Footer() {
           >
             Terms &amp; Conditions
           </Link>
+          <Link
+            to="/privacy"
+            className="transition-colors hover:text-ink"
+          >
+            Privacy Policy
+          </Link>
           <p>Travel together. Remember forever.</p>
         </div>
       </div>
