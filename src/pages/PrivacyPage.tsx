@@ -3,7 +3,7 @@ import { BrandMark } from '../components/atoms/BrandMark'
 import { ThemeToggle } from '../components/atoms/ThemeToggle'
 import { Footer } from '../components/organisms/Footer'
 
-const UPDATED = 'November 15, 2026'
+const UPDATED = 'November 16, 2026'
 const SUPPORT_EMAIL = 'kaunghtetkyaw.dev@gmail.com'
 
 type Section = {
@@ -24,12 +24,13 @@ const SECTIONS: Section[] = [
     title: '2. Information you give us',
     paragraphs: ['When you create an account or use Triplog, you may provide:'],
     bullets: [
-      'Account details: first and last name, email address, phone number, and password (stored only as a secure hash)',
+      'Account details: first and last name, email address, password (stored only as a secure hash), and phone number if you choose to add one',
       'Profile details: profile picture, home country, and home city',
       'Sign-in details from Google or Apple if you choose those options, such as your name, email address, and an account identifier',
       'Trip content: trips, destinations, notes, inspirations, savings contributions, photos, videos, and captions you add',
       'Social connections: friends (“crew”) you add and trips you invite people to or join',
       'Security settings: two-factor authentication secrets and backup codes, if you turn on 2FA',
+      'Reports and blocks: content or users you report (with the reason you choose) and users you block',
       'Messages you send us, such as support emails',
     ],
   },
@@ -38,7 +39,6 @@ const SECTIONS: Section[] = [
     paragraphs: ['When you use the App, we and our service providers may collect:'],
     bullets: [
       'Device information such as device type, operating system, app version, language, and a push notification identifier',
-      'Approximate or precise location while the App is open, only if you grant location permission, so we can send relevant trip alerts',
       'Basic technical logs, such as IP address and request times, needed to keep the service secure and working',
       'Subscription status (for example, whether Triplog Plus is active and when it expires)',
     ],
@@ -52,7 +52,6 @@ const SECTIONS: Section[] = [
       'Camera: to take a profile picture and capture trip moments',
       'Microphone: to record sound when you record a video moment',
       'Photos and media: to choose a profile picture or moment, and to save trip moments to your gallery when you ask',
-      'Location (while using the App): to send trip alerts that are relevant to where you are',
       'Notifications: to tell you about trip invites, updates, and reminders',
     ],
   },
@@ -66,6 +65,7 @@ const SECTIONS: Section[] = [
       'Send verification codes, security emails, and service messages',
       'Send push notifications you have allowed',
       'Process and verify Triplog Plus subscriptions',
+      'Review reports, enforce our Terms, and remove objectionable content or users',
       'Prevent fraud and abuse, keep the App secure, and fix problems',
       'Meet legal obligations',
     ],
@@ -89,6 +89,7 @@ const SECTIONS: Section[] = [
       'Hide your email address from other users',
       'Hide your location from other users',
       'Stop others from downloading moments you share',
+      'Block other users and report content',
       'Turn on two-factor authentication',
       'Delete your account',
     ],
@@ -101,7 +102,7 @@ const SECTIONS: Section[] = [
     bullets: [
       'Amazon Web Services (AWS): cloud hosting and storage for photos and videos',
       'Resend: sending verification codes and account emails',
-      'OneSignal: push notifications and location-based trip alerts',
+      'OneSignal: push notifications',
       'RevenueCat, Apple App Store, and Google Play: processing and verifying purchases and subscriptions',
       'Google and Apple: signing you in when you choose those options',
     ],

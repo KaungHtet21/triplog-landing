@@ -3,7 +3,7 @@ import { BrandMark } from '../components/atoms/BrandMark'
 import { ThemeToggle } from '../components/atoms/ThemeToggle'
 import { Footer } from '../components/organisms/Footer'
 
-const UPDATED = 'August 5, 2026'
+const UPDATED = 'November 16, 2026'
 const SUPPORT_EMAIL = 'kaunghtetkyaw.dev@gmail.com'
 
 type Section = {
@@ -16,7 +16,8 @@ const SECTIONS: Section[] = [
   {
     title: '1. Acceptance of these Terms',
     paragraphs: [
-      'By downloading, accessing, or using Triplog (the “App”), you agree to these Terms & Conditions (“Terms”). If you do not agree, do not use the App.',
+      'By downloading, accessing, or using Triplog (the “App”), you agree to these Terms & Conditions (“Terms”), which form an End User License Agreement (EULA) between you and Triplog. If you do not agree, do not use the App.',
+      'If you downloaded the App from the Apple App Store, these Terms apply together with Apple’s Licensed Application End User License Agreement (https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). Where they differ, these Terms apply to the extent allowed. Apple is not a party to these Terms and is not responsible for the App or its content.',
       'We may update these Terms from time to time. Continued use after changes means you accept the updated Terms. The “Last updated” date at the top of this page shows when they last changed.',
     ],
   },
@@ -45,7 +46,7 @@ const SECTIONS: Section[] = [
   {
     title: '5. Acceptable use',
     paragraphs: [
-      'You agree not to misuse Triplog. That includes, without limitation:',
+      'Triplog has zero tolerance for objectionable content and abusive users. You agree not to misuse Triplog. That includes, without limitation:',
     ],
     bullets: [
       'Harassing, threatening, or harming others',
@@ -53,62 +54,73 @@ const SECTIONS: Section[] = [
       'Attempting to break into, scrape, or disrupt the App or its infrastructure',
       'Impersonating another person or misrepresenting your affiliation',
       'Using the App for spam or unauthorized commercial messaging',
+      'Posting sexual, violent, or otherwise objectionable content',
     ],
   },
   {
-    title: '6. Trips, invites, and shared spaces',
+    title: '6. Reporting and blocking',
+    paragraphs: [
+      'You can report any moment, note, inspiration, or user profile from inside the App, and you can block any user. Blocking hides their content from you and stops them from sending you crew requests.',
+      `We review reports within 24 hours. If content breaks these Terms, we remove it and may suspend or permanently ban the user who posted it. You can also report content by emailing ${SUPPORT_EMAIL}.`,
+    ],
+  },
+  {
+    title: '7. Trips, invites, and shared spaces',
     paragraphs: [
       'Trip creators and members control who can join shared trips. Invite links and codes should be shared carefully — anyone with access may see trip content available to members.',
       'We are not responsible for disputes between trip members. You can leave trips or adjust privacy settings where the App provides those controls.',
     ],
   },
   {
-    title: '7. Privacy',
+    title: '8. Privacy',
     paragraphs: [
       'How we handle personal data is described in our Privacy Policy at triplogco.com/privacy. Features such as hiding your email or location from other users are available in Settings where offered.',
       'Media you choose to download to your device gallery is stored on your device under your device’s rules; clearing Triplog’s cache does not remove gallery saves.',
     ],
   },
   {
-    title: '8. Premium features',
+    title: '9. Triplog Plus subscriptions',
     paragraphs: [
-      'Some features may be offered as paid or subscription (“Triplog Plus”) services. Pricing, billing, and cancellation terms will be shown at purchase through the applicable app store. Purchases are also subject to Apple App Store or Google Play terms.',
+      'Triplog Plus is an optional auto-renewing subscription that unlocks unlimited trips, trip games, and Disposable Camera. It is offered monthly or yearly. The price is shown in the App before you buy.',
+      'Payment is charged to your Apple ID or Google Play account when you confirm the purchase. The subscription renews automatically at the same price for the same period unless you cancel at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the current period ends.',
+      'You can manage or cancel your subscription at any time in your App Store or Google Play account settings. Cancelling stops future renewals; you keep Plus until the end of the period you paid for. Deleting the App or your Triplog account does not cancel a subscription.',
+      'Refunds are handled by Apple or Google under their policies. Any unused portion of a free trial, if offered, is forfeited when you buy a subscription.',
     ],
   },
   {
-    title: '9. Intellectual property',
+    title: '10. Intellectual property',
     paragraphs: [
       'The App, branding, design, and software (excluding Your Content) are owned by Triplog and its licensors. You may not copy, modify, reverse engineer, or redistribute the App except as allowed by law.',
     ],
   },
   {
-    title: '10. Disclaimers',
+    title: '11. Disclaimers',
     paragraphs: [
       'The App is provided “as is” and “as available.” Travel plans change, networks fail, and devices differ — we do not guarantee uninterrupted or error-free service, or that countdown timers, maps, or third-party links will always be accurate.',
       'To the fullest extent permitted by law, Triplog disclaims warranties of merchantability, fitness for a particular purpose, and non-infringement.',
     ],
   },
   {
-    title: '11. Limitation of liability',
+    title: '12. Limitation of liability',
     paragraphs: [
       'To the fullest extent permitted by law, Triplog and its operators will not be liable for indirect, incidental, special, consequential, or punitive damages, or for loss of data, profits, or goodwill arising from your use of the App.',
       'Our total liability for any claim relating to the App will not exceed the greater of (a) the amount you paid us for Triplog in the 12 months before the claim, or (b) fifty U.S. dollars (US$50), except where liability cannot be limited by law.',
     ],
   },
   {
-    title: '12. Termination',
+    title: '13. Termination',
     paragraphs: [
       'You may stop using Triplog at any time. We may suspend or terminate access if you violate these Terms or if we need to protect the App or other users. Provisions that should survive (including ownership, disclaimers, and liability limits) will continue after termination.',
     ],
   },
   {
-    title: '13. Governing law',
+    title: '14. Governing law',
     paragraphs: [
       'These Terms are governed by the laws applicable in the jurisdiction where Triplog’s operators primarily conduct business, without regard to conflict-of-law rules, except where mandatory consumer protections in your country apply.',
     ],
   },
   {
-    title: '14. Contact',
+    title: '15. Contact',
     paragraphs: [
       `For help, feedback, or legal notices, email ${SUPPORT_EMAIL}.`,
     ],
